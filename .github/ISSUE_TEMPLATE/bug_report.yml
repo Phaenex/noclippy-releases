@@ -1,0 +1,61 @@
+name: Bug report
+description: Something in NoClippy doesn't work right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. If this is a security issue, please use private reporting on the Security tab instead, not a public issue.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what did it do instead?
+      placeholder: I turned on protection with a Discord rule in Exclude mode, but Discord still shows in OBS.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add a rule for ...
+        2. Set mode to ...
+        3. Turn protection on
+        4. Check OBS ...
+    validations:
+      required: true
+  - type: dropdown
+    id: mask-mode
+    attributes:
+      label: Which mask mode
+      options:
+        - Black bar / overlay
+        - Exclude from capture (injection)
+        - Blackout (injection)
+        - Light/Heavy cover
+        - Not sure / not relevant
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: NoClippy version
+      description: Settings → Help
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 23H2
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: Settings → Help → Open logs. Paste anything relevant, scrub anything private first.
+    validations:
+      required: false

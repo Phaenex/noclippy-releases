@@ -60,7 +60,7 @@ No account, no telemetry. NoClippy checks this page for updates when it starts, 
 
 - Something stuck invisible in OBS after closing NoClippy? See [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 - Bugs and requests: [open an issue](https://github.com/Phaenex/noclippy-releases/issues).
-- Chat: [NoClippy Discord](https://discord.gg/uKXm2pq6).
+- Questions and ideas: [Discussions](https://github.com/Phaenex/noclippy-releases/discussions).
 - Security problems: [SECURITY.md](SECURITY.md). Please report those privately.
 
 ## Support

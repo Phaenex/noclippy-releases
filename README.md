@@ -43,7 +43,7 @@ You don't pick which. Each rule's status tells you: "Invisible on stream" or "Co
 - **Leak fail-safe** (on by default): if a window can't be hidden at all, NoClippy minimizes it rather than leave it on stream. Nothing gets closed.
 - **Lockdown mode** (opt-in): hide every window except the ones you mark stream-safe
 - **OBS and Streamlabs:** turn protection on automatically when you go live
-- **Stream Deck:** toggle, panic and switch profiles from your deck
+- **Stream Deck:** toggle protection or hit panic from your deck with an HTTP action (the token is in Settings, then Advanced)
 - **Profiles** for different kinds of streams
 
 ## Honest limits

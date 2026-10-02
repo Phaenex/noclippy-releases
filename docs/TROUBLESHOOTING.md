@@ -9,7 +9,7 @@ Windows **capture-exclude** flags (`SetWindowDisplayAffinity`) can outlive NoCli
 **While NoClippy is running**
 
 1. Turn **protection off** on the dashboard.
-2. Open **Settings → Help → Fast recovery → App still hidden in OBS while protection is off** (or the dashboard **Fix now** banner).
+2. Click **Fix stuck windows** on the main screen. If that doesn't clear it, open **Help → Troubleshoot and recover** and choose **An app is still hidden when it shouldn't be**.
 3. Refresh the OBS source (right-click → Refresh).
 
 **After quitting NoClippy**
@@ -28,11 +28,11 @@ Config and logs live under `%APPDATA%\app.noclippy.desktop\` (same path the app 
 2. Reopen the app.
 3. Refresh OBS.
 
-**If you deleted the app's rule before cleaning up**, NoClippy may not know that app
-anymore. It only clears flags on apps you have a rule for (or that it recorded
-hiding), and it never touches other apps that hide themselves from capture, like GPU
-overlays. Quitting and reopening the app always clears it, or re-add the rule and run
-the fix above.
+**If you removed the app from NoClippy before cleaning up**, NoClippy may not know that
+app anymore. It only clears flags on apps you've added (or that it recorded hiding), and
+it never touches other apps that hide themselves from capture, like GPU overlays.
+Quitting and reopening the app always clears it, or add the app again and run the fix
+above.
 
 **If Windows blocks the clear** (access denied in logs): run NoClippy or `noclippy-unstick.exe` **as administrator**, or restart the affected app.
 
@@ -40,22 +40,26 @@ the fix above.
 
 ## Protection toggle stopped re-hiding windows
 
-1. **Settings → Help → Checks → Recovery** (or dashboard Recovery panel).
-2. **Force remask** (Help → Fast recovery, or Recovery panel).
-3. If duplicate NoClippy copies are running, close extras first (dashboard banner or Help).
+1. Click **Fix stuck windows** on the main screen and follow what it suggests.
+2. Use **Re-hide everything** (in the result, or **Help → Troubleshoot and recover**).
+3. If duplicate NoClippy copies are running, close extras first (the main screen shows a banner).
 
 ---
 
-## Invisible hiding fails for a rule
+## Invisible hiding fails for an app
+
+When invisible hiding fails, NoClippy covers the app with a black bar on stream
+automatically, and you see the bar too. If even that fails, it minimizes the window and
+tells you which app.
 
 | Symptom | What to try |
 |--------|-------------|
-| Rule shows failed / injection error | Antivirus may have quarantined `noclippy_injector.dll`. Restore it or reinstall. The window falls back to a black bar meanwhile. |
-| Access denied | Target app may be elevated; run NoClippy as admin, or use **Black bar** overlay mode. |
-| 32-bit app | Use **Black bar**; capture-exclude needs 64-bit. |
-| Anti-cheat game on denylist | Use **Black bar** only; never inject into protected games. |
-| Electron app black on your screen | Turn off **Hardware acceleration** in that app and restart, or use **Black bar**. |
-| Custom / uncommon app | Any process name in your rule is supported unless it is on the anti-cheat denylist. Use the exact `.exe` from Task Manager → Details. |
+| Injection error in the log | Antivirus may have quarantined NoClippy's `noclippy_injector` file. Restore it or reinstall. The app gets a black bar meanwhile. |
+| Access denied | The app may be running as administrator. Run NoClippy as administrator too, or live with the black bar. |
+| 32-bit app | It can't be hidden invisibly, so it always gets a black bar. |
+| Anti-cheat game | NoClippy never injects into these, to avoid a ban. They always get a black bar. |
+| Electron app black on your own screen | Turn off **Hardware acceleration** in that app and restart it. |
+| Uncommon app | Any program works unless it's an anti-cheat game. Use the exact `.exe` name from Task Manager → Details. |
 
 ---
 
@@ -112,4 +116,4 @@ Rule tip: match the **main UI process** shown in Task Manager (Steam → `steam.
 
 **Settings → Help → Copy report**, or Discord / GitHub issue with logs from **Open logs**.
 
-Include: protection on/off, mask mode (black bar vs invisible), affected app process name, and whether NoClippy was running when the app stayed invisible.
+Include: protection on/off, whether the app was invisible or showed a black bar, the app's program name, and whether NoClippy was running when the app stayed invisible.

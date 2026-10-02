@@ -1,12 +1,12 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Keep private windows off your stream. Covers or hides Discord DMs, password managers, and personal tabs from your capture.",
   "homepage": "https://github.com/Phaenex/noclippy-releases",
   "license": "PolyForm-Noncommercial-1.0.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Phaenex/noclippy-releases/releases/download/v1.0.1/NoClippy_1.0.1_x64-setup.exe#/NoClippy-setup.exe",
-      "hash": "b6e29c92705f3ddbe166497248bf762acd26a0ca88d29651ae1f47309a15d7bd"
+      "url": "https://github.com/Phaenex/noclippy-releases/releases/download/v1.0.2/NoClippy_1.0.2_x64-setup.exe#/NoClippy-setup.exe",
+      "hash": "f092f348b67e2acaef961a35448e6cb1b552b44e528a10e3e1584cc407c1f146"
     }
   },
   "installer": {

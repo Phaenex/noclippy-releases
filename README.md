@@ -67,7 +67,7 @@ No account, no telemetry. NoClippy checks this page for updates when it starts, 
 
 NoClippy is free and it's staying free. So is everything else I build. I make these on my own, and right now tips are what keep that possible. I was in school for AI and had to put it on hold this year, so if NoClippy ever kept a DM or a password off your stream, a few bucks does help.
 
-- [Tip on Ko-fi](https://ko-fi.com/noclippyfree)
+- [Tip on Ko-fi](https://ko-fi.com/phaenex)
 - [GitHub Sponsors](https://github.com/sponsors/Phaenex)
 
 No paywall, no pro tier, no donation pop-ups.
